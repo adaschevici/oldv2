@@ -1,0 +1,23 @@
+{
+  "name": "@goodreads-v2/root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "goodreads",
+    "react-advanced",
+    "monorepo"
+  ],
+  "author": "@arty_das",
+  "license": "MIT",
+  "dependencies": {
+    "create-react-app": "^3.4.1",
+    "lerna": "^3.20.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.4"
+  }
+}
