@@ -1,6 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import { Alert } from "@goodreads-v2/component-library";
+import "./App.css";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <main>
+        <Alert message="chuck" />
+      </main>
     </div>
   );
 }

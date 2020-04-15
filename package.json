@@ -4,6 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "lerna clean",
+    "bootstrap": "lerna bootstrap",
+    "clean:root": "rm -rf node_modules",
+    "clean:locks": "find . -type f -name 'package-lock.json' -exec rm {} +",
+    "clean:all": "npm-run-all clean clean:*",
+    "bootstrap:all": "npm i && npm run bootstrap",
+    "build:components": "lerna exec npm run build --scope=@goodreads-v2/component-library",
+    "build:storybook": "lerna exec npm run build-storybook --scope=@goodreads-v2/component-library",
+    "build:app": "lerna exec npm run build --scope=@goodreads-v2/goodreads",
+    "start:storybook": "lerna exec npm run storybook --scope=@goodreads-v2/component-library",
+    "start:goodreads": "lerna exec npm start --scope=@goodreads-v2/goodreads",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,9 +26,12 @@
   "license": "MIT",
   "dependencies": {
     "create-react-app": "^3.4.1",
-    "lerna": "^3.20.2"
+    "lerna": "^3.20.2",
+    "styled-components": "^5.1.0",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4"
   }
 }
