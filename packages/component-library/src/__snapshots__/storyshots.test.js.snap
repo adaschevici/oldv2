@@ -1,5 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Components|Elements.BookCard Book Card with configurable style 1`] = `
+<div
+  className="css-5xgmnc"
+>
+  <div
+    className="css-1mrlfg6"
+  >
+    <img
+      className="css-9taffg"
+      src="https://i.pinimg.com/600x315/73/20/9c/73209c21dec8e08ea18d41a5cc144c0d.jpg"
+    />
+    <div
+      className="css-1f9rp2t"
+    >
+      <h3
+        className="sc-AxjAm iqgaMn"
+        color="#2d8fd5"
+        fontFamily="Artifika"
+        fontSize={
+          Array [
+            12,
+            12,
+            13,
+            13,
+            13,
+            14,
+          ]
+        }
+        fontWeight={700}
+      >
+        harry potter
+      </h3>
+      <p
+        className="sc-AxjAm dmFBGQ"
+        fontFamily="\\"Verdana\\", sans-serif"
+        fontSize={0}
+      >
+        example description
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Typography|Body.Body Basic Body with configurable style 1`] = `
 <apple
   className="sc-AxjAm pHOtr"
@@ -21,7 +65,7 @@ exports[`Storyshots Typography|Body.Body Basic Body with configurable style 1`] 
 `;
 
 exports[`Storyshots Typography|Headings.Artifika Basic Header with configurable style 1`] = `
-<apple
+<h1
   className="sc-AxjAm ledlAQ"
   color="#428bca"
   fontFamily="Artifika"
@@ -38,5 +82,5 @@ exports[`Storyshots Typography|Headings.Artifika Basic Header with configurable 
   fontWeight={700}
 >
   Sample Header
-</apple>
+</h1>
 `;

@@ -46,8 +46,8 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/cli": "^5.3.18",
     "@storybook/react": "^5.3.18",
-    "babel-loader": "^8.1.0",
     "babel-jest": "^25.4.0",
+    "babel-loader": "^8.1.0",
     "jest": "^25.4.0",
     "rollup": "^2.6.1",
     "rollup-plugin-babel": "^4.4.0",
@@ -58,5 +58,8 @@
   "peerDependencies": {
     "styled-components": "^5.1.0",
     "styled-system": "^5.1.5"
+  },
+  "dependencies": {
+    "rebass": "^4.0.7"
   }
 }

@@ -1,5 +1,5 @@
-import Alert from "./alert";
+import Card from './card'
 
 export const components = {
-  Alert
-};
+  Card,
+}
