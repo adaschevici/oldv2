@@ -10,6 +10,4 @@ export default createGlobalStyle`
     url(${ArtifikaWoff2}) format('woff2'),
     url(${ArtifikaWoff}) format('woff');
   };
-
-  @import url("https://fonts.googleapis.com/css?family=Lato:400,600&display=swap");
 `

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Typography|Body.Body Basic Body with configurable style 1`] = `
+<apple
+  className="sc-AxjAm pHOtr"
+  color="#428bca"
+  fontFamily="\\"Verdana\\", sans-serif"
+  fontSize={
+    Array [
+      3,
+      3,
+      4,
+      4,
+      5,
+      5,
+    ]
+  }
+>
+  Sample Header
+</apple>
+`;
+
+exports[`Storyshots Typography|Headings.Artifika Basic Header with configurable style 1`] = `
+<apple
+  className="sc-AxjAm ledlAQ"
+  color="#428bca"
+  fontFamily="Artifika"
+  fontSize={
+    Array [
+      12,
+      12,
+      13,
+      13,
+      13,
+      14,
+    ]
+  }
+  fontWeight={700}
+>
+  Sample Header
+</apple>
+`;
