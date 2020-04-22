@@ -22,7 +22,7 @@ storiesOf('Typography|Headings.Artifika', module)
       return acc
     }, {})
 
-    const tag = select('Tags', tags, 'apple')
+    const tag = select('Tags', tags, 'h1')
     const fontColor = select(
       'Palette',
       filteredColors,

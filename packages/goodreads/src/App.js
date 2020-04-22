@@ -1,9 +1,9 @@
-import React from "react";
-import logo from "./logo.svg";
-import { components } from "@goodreads-v2/component-library";
-import "./App.css";
+import React from 'react'
+import logo from './logo.svg'
+import { typography } from '@goodreads-v2/component-library'
+import './App.css'
 
-const { Alert } = components;
+const { Artifika } = typography
 
 function App() {
   return (
@@ -22,12 +22,12 @@ function App() {
           Learn React
         </a>
       </header>
-      <main style={{ height: "70vh" }}>
-        <Alert message="chuck" />
+      <main style={{ height: '70vh' }}>
+        <Artifika tag="h1">Chuck</Artifika>
       </main>
       <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

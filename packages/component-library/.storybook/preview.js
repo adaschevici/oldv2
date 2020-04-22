@@ -6,7 +6,7 @@ import { withConsole } from '@storybook/addon-console'
 
 import theme from '../src/theme'
 
-import FontFace from '../src/fonts'
+import GlobalFonts from '../src/fonts'
 
 addParameters({
   viewport: {
@@ -16,7 +16,7 @@ addParameters({
 
 addDecorator(storyFn => (
   <ThemeProvider theme={theme}>
-    <FontFace />
+    <GlobalFonts />
     {storyFn()}
   </ThemeProvider>
 ))
