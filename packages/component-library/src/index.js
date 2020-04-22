@@ -1,1 +1,1 @@
-export Alert from "./components/alert";
+export { components } from "./components";

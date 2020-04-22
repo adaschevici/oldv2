@@ -1,7 +1,9 @@
 import React from "react";
 import logo from "./logo.svg";
-import { Alert } from "@goodreads-v2/component-library";
+import { components } from "@goodreads-v2/component-library";
 import "./App.css";
+
+const { Alert } = components;
 
 function App() {
   return (
@@ -20,9 +22,10 @@ function App() {
           Learn React
         </a>
       </header>
-      <main>
+      <main style={{ height: "70vh" }}>
         <Alert message="chuck" />
       </main>
+      <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
     </div>
   );
 }
