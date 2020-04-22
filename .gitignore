@@ -104,3 +104,4 @@ dist
 .tern-port
 node_modules
 packages/*/node_modules
+packages/component-library/lib
