@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Card, Image, Text } from 'rebass'
+import { Box, Card, Image } from 'rebass'
 import { typography } from '../../typography'
 
 const { Artifika, Body } = typography
