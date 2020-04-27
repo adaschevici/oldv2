@@ -2,7 +2,7 @@
 
 exports[`Storyshots Components|Elements.BookCard Book Card with configurable style 1`] = `
 <div
-  className="css-5xgmnc"
+  className="css-16vu25q"
 >
   <div
     className="css-1mrlfg6"
@@ -39,6 +39,508 @@ exports[`Storyshots Components|Elements.BookCard Book Card with configurable sty
       >
         example description
       </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components|Elements.BookGrid Book Grid for list 1`] = `
+<div
+  className="css-13ieuz9"
+>
+  <div
+    className="css-16vu25q"
+  >
+    <div
+      className="css-1mrlfg6"
+    >
+      <img
+        className="css-9taffg"
+        src="https://picsum.photos/400/200?random=0"
+      />
+      <div
+        className="css-1f9rp2t"
+      >
+        <h3
+          className="sc-AxjAm iqgaMn"
+          color="#2d8fd5"
+          fontFamily="Artifika"
+          fontSize={
+            Array [
+              12,
+              12,
+              13,
+              13,
+              13,
+              14,
+            ]
+          }
+          fontWeight={700}
+        >
+          consectetur dolores dolorum
+        </h3>
+        <p
+          className="sc-AxjAm dmFBGQ"
+          fontFamily="\\"Verdana\\", sans-serif"
+          fontSize={0}
+        >
+          Laborum repellendus est dolor eos enim. Ad velit et vel. Nesciunt debitis fugit ea perferendis et corrupti nobis sit quo. Quis aspernatur natus illo quas dignissimos perferendis voluptatem est. Aut dolore commodi id et. Architecto maiores consequatur sed recusandae qui et qui qui sed.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-16vu25q"
+  >
+    <div
+      className="css-1mrlfg6"
+    >
+      <img
+        className="css-9taffg"
+        src="https://picsum.photos/400/200?random=1"
+      />
+      <div
+        className="css-1f9rp2t"
+      >
+        <h3
+          className="sc-AxjAm iqgaMn"
+          color="#2d8fd5"
+          fontFamily="Artifika"
+          fontSize={
+            Array [
+              12,
+              12,
+              13,
+              13,
+              13,
+              14,
+            ]
+          }
+          fontWeight={700}
+        >
+          temporibus temporibus ipsam
+        </h3>
+        <p
+          className="sc-AxjAm dmFBGQ"
+          fontFamily="\\"Verdana\\", sans-serif"
+          fontSize={0}
+        >
+          Iusto accusamus similique iusto ut et ipsa. Unde nihil laudantium nihil. Eius voluptas molestiae vel dignissimos facilis. Quae inventore asperiores sit est quae non cum sint mollitia.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-16vu25q"
+  >
+    <div
+      className="css-1mrlfg6"
+    >
+      <img
+        className="css-9taffg"
+        src="https://picsum.photos/400/200?random=2"
+      />
+      <div
+        className="css-1f9rp2t"
+      >
+        <h3
+          className="sc-AxjAm iqgaMn"
+          color="#2d8fd5"
+          fontFamily="Artifika"
+          fontSize={
+            Array [
+              12,
+              12,
+              13,
+              13,
+              13,
+              14,
+            ]
+          }
+          fontWeight={700}
+        >
+          aut provident qui
+        </h3>
+        <p
+          className="sc-AxjAm dmFBGQ"
+          fontFamily="\\"Verdana\\", sans-serif"
+          fontSize={0}
+        >
+          Natus et sit voluptas quas. Aut vitae est nihil error neque consequatur. Et voluptas repudiandae.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-16vu25q"
+  >
+    <div
+      className="css-1mrlfg6"
+    >
+      <img
+        className="css-9taffg"
+        src="https://picsum.photos/400/200?random=3"
+      />
+      <div
+        className="css-1f9rp2t"
+      >
+        <h3
+          className="sc-AxjAm iqgaMn"
+          color="#2d8fd5"
+          fontFamily="Artifika"
+          fontSize={
+            Array [
+              12,
+              12,
+              13,
+              13,
+              13,
+              14,
+            ]
+          }
+          fontWeight={700}
+        >
+          rem temporibus et
+        </h3>
+        <p
+          className="sc-AxjAm dmFBGQ"
+          fontFamily="\\"Verdana\\", sans-serif"
+          fontSize={0}
+        >
+          A sed autem eveniet quis voluptas. Autem deleniti accusantium adipisci et eum repellendus. Dolorum qui non. Nostrum quia distinctio sed rerum id tempore officia sit rem. Odit aut incidunt quasi. Qui esse reiciendis sed est consequatur doloribus ullam est iusto.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-16vu25q"
+  >
+    <div
+      className="css-1mrlfg6"
+    >
+      <img
+        className="css-9taffg"
+        src="https://picsum.photos/400/200?random=4"
+      />
+      <div
+        className="css-1f9rp2t"
+      >
+        <h3
+          className="sc-AxjAm iqgaMn"
+          color="#2d8fd5"
+          fontFamily="Artifika"
+          fontSize={
+            Array [
+              12,
+              12,
+              13,
+              13,
+              13,
+              14,
+            ]
+          }
+          fontWeight={700}
+        >
+          hic laborum qui
+        </h3>
+        <p
+          className="sc-AxjAm dmFBGQ"
+          fontFamily="\\"Verdana\\", sans-serif"
+          fontSize={0}
+        >
+          Fuga dolorem nihil nesciunt voluptatem itaque maxime. Eum voluptatum harum rerum odio ea voluptatem ipsum. Magni non velit hic accusantium deleniti error. Dolor sed ut illum numquam inventore dolor. Molestiae assumenda aut impedit quae quibusdam sint iste. Delectus earum ratione voluptas.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-16vu25q"
+  >
+    <div
+      className="css-1mrlfg6"
+    >
+      <img
+        className="css-9taffg"
+        src="https://picsum.photos/400/200?random=5"
+      />
+      <div
+        className="css-1f9rp2t"
+      >
+        <h3
+          className="sc-AxjAm iqgaMn"
+          color="#2d8fd5"
+          fontFamily="Artifika"
+          fontSize={
+            Array [
+              12,
+              12,
+              13,
+              13,
+              13,
+              14,
+            ]
+          }
+          fontWeight={700}
+        >
+          doloremque illo deserunt
+        </h3>
+        <p
+          className="sc-AxjAm dmFBGQ"
+          fontFamily="\\"Verdana\\", sans-serif"
+          fontSize={0}
+        >
+          Non hic quo. Nesciunt adipisci eligendi blanditiis consequatur. Itaque debitis laborum magnam cumque ut quas sit quo ut. Nihil eum est quod.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-16vu25q"
+  >
+    <div
+      className="css-1mrlfg6"
+    >
+      <img
+        className="css-9taffg"
+        src="https://picsum.photos/400/200?random=6"
+      />
+      <div
+        className="css-1f9rp2t"
+      >
+        <h3
+          className="sc-AxjAm iqgaMn"
+          color="#2d8fd5"
+          fontFamily="Artifika"
+          fontSize={
+            Array [
+              12,
+              12,
+              13,
+              13,
+              13,
+              14,
+            ]
+          }
+          fontWeight={700}
+        >
+          ut blanditiis dolor
+        </h3>
+        <p
+          className="sc-AxjAm dmFBGQ"
+          fontFamily="\\"Verdana\\", sans-serif"
+          fontSize={0}
+        >
+          Quis nostrum recusandae voluptatem quam suscipit ut. Sunt architecto sunt illo esse quia fuga deserunt. At dolorum quis voluptatum.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-16vu25q"
+  >
+    <div
+      className="css-1mrlfg6"
+    >
+      <img
+        className="css-9taffg"
+        src="https://picsum.photos/400/200?random=7"
+      />
+      <div
+        className="css-1f9rp2t"
+      >
+        <h3
+          className="sc-AxjAm iqgaMn"
+          color="#2d8fd5"
+          fontFamily="Artifika"
+          fontSize={
+            Array [
+              12,
+              12,
+              13,
+              13,
+              13,
+              14,
+            ]
+          }
+          fontWeight={700}
+        >
+          quia aut dolores
+        </h3>
+        <p
+          className="sc-AxjAm dmFBGQ"
+          fontFamily="\\"Verdana\\", sans-serif"
+          fontSize={0}
+        >
+          Accusantium dolor modi voluptatem sed similique quia aut molestiae ut. Reiciendis error iste similique dicta et sit consequatur. Tenetur qui adipisci omnis pariatur enim sapiente aut. Libero sit aliquam quaerat odit nam. Sit dolor autem omnis perferendis repudiandae laboriosam expedita in. Totam sed et optio repellat tenetur sint.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-16vu25q"
+  >
+    <div
+      className="css-1mrlfg6"
+    >
+      <img
+        className="css-9taffg"
+        src="https://picsum.photos/400/200?random=8"
+      />
+      <div
+        className="css-1f9rp2t"
+      >
+        <h3
+          className="sc-AxjAm iqgaMn"
+          color="#2d8fd5"
+          fontFamily="Artifika"
+          fontSize={
+            Array [
+              12,
+              12,
+              13,
+              13,
+              13,
+              14,
+            ]
+          }
+          fontWeight={700}
+        >
+          necessitatibus ea asperiores
+        </h3>
+        <p
+          className="sc-AxjAm dmFBGQ"
+          fontFamily="\\"Verdana\\", sans-serif"
+          fontSize={0}
+        >
+          Quae perspiciatis et qui aut necessitatibus quam aut consequatur. Nihil consequatur commodi quia dolorum accusamus quam. Perferendis id velit consequatur.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-16vu25q"
+  >
+    <div
+      className="css-1mrlfg6"
+    >
+      <img
+        className="css-9taffg"
+        src="https://picsum.photos/400/200?random=9"
+      />
+      <div
+        className="css-1f9rp2t"
+      >
+        <h3
+          className="sc-AxjAm iqgaMn"
+          color="#2d8fd5"
+          fontFamily="Artifika"
+          fontSize={
+            Array [
+              12,
+              12,
+              13,
+              13,
+              13,
+              14,
+            ]
+          }
+          fontWeight={700}
+        >
+          eius et non
+        </h3>
+        <p
+          className="sc-AxjAm dmFBGQ"
+          fontFamily="\\"Verdana\\", sans-serif"
+          fontSize={0}
+        >
+          Cumque occaecati fuga quas quos et voluptas voluptate quo. Dignissimos molestiae doloremque unde commodi sit qui facilis. Tenetur nisi numquam rerum et consequuntur. Ipsum possimus id cupiditate consequuntur mollitia quis. Id vitae aut non et. Rerum sit reiciendis aperiam aut rerum et ea non.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components|Elements.Login Login prompt 1`] = `
+<div
+  className="css-5xgmnc"
+>
+  <div
+    className="css-1mrlfg6"
+  >
+    <div
+      className="css-h9fdzh"
+    >
+      <label
+        className="css-knfhfe"
+        htmlFor="email"
+      >
+        <p
+          className="sc-AxjAm eXlAEU"
+          fontFamily="\\"Verdana\\", sans-serif"
+          fontSize={
+            Array [
+              3,
+              3,
+              4,
+              4,
+              5,
+              5,
+            ]
+          }
+        >
+          Email
+        </p>
+      </label>
+      <input
+        className="css-kplop5"
+        id="email"
+        name="email"
+        placeholder="jane@example.com"
+        type="email"
+      />
+    </div>
+    <div
+      className="css-h9fdzh"
+    >
+      <label
+        className="css-knfhfe"
+        htmlFor="Password"
+      >
+        <p
+          className="sc-AxjAm eXlAEU"
+          fontFamily="\\"Verdana\\", sans-serif"
+          fontSize={
+            Array [
+              3,
+              3,
+              4,
+              4,
+              5,
+              5,
+            ]
+          }
+        >
+          Password
+        </p>
+      </label>
+      <input
+        className="css-kplop5"
+        id="password"
+        name="password"
+        placeholder="your password here..."
+        type="password"
+      />
+    </div>
+    <div
+      className="css-28fdfd"
+    >
+      <button
+        className="css-r257o7"
+        onClick={[Function]}
+      >
+        Login
+      </button>
     </div>
   </div>
 </div>

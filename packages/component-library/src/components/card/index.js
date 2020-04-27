@@ -5,7 +5,7 @@ import { typography } from '../../typography'
 const { Artifika, Body } = typography
 
 export default ({ image, title, description }) => (
-  <Box width={280}>
+  <Box width={1}>
     <Card
       sx={{
         p: 1,
