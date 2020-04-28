@@ -17,6 +17,8 @@
     "static:storybook": "docker run --rm -p 8080:80 -v $(pwd)/packages/component-library/storybook-static/:/usr/share/nginx/html nginx",
     "static:goodreads": "docker run --rm -p 8080:80 -v $(pwd)/packages/goodreads/build/:/usr/share/nginx/html nginx",
     "start:goodreads": "lerna exec npm start --scope=@goodreads-v2/goodreads",
+    "start:server": "lerna exec npm run server:dev --scope=jungle-jim",
+    "start:app": "npm-run-all --parallel start:server start:goodreads",
     "snapshot:components": "lerna exec npm run test --scope=@goodreads-v2/component-library"
   },
   "keywords": [

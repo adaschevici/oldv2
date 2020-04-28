@@ -1,6 +1,7 @@
 import React from 'react'
 import { typography } from '@goodreads-v2/component-library'
-import './App.css'
+import './index.css'
+import BookList from '../book-list'
 
 const { Artifika } = typography
 
@@ -8,7 +9,8 @@ function App() {
   return (
     <div className="App">
       <main style={{ height: '70vh' }}>
-        <Artifika tag="h1">Chuck</Artifika>
+        <Artifika tag="h1">Books</Artifika>
+        <BookList />
       </main>
     </div>
   )
