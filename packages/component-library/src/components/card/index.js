@@ -1,10 +1,23 @@
 import React from 'react'
 import { Box, Card, Image } from 'rebass'
+import { Select } from '@rebass/forms'
+import BeautyStars from 'beauty-stars'
 import { typography } from '../../typography'
 
 const { Artifika, Body } = typography
 
-export default ({ image, title, description }) => (
+const actions = [
+  {
+    key: 'start-reading',
+    name: 'Start reading...',
+  },
+  {
+    key: 'not-started',
+    name: 'Not reading...',
+  },
+]
+
+export default ({ image, title, description, rating, onStarted, bookId }) => (
   <Box width={1}>
     <Card
       sx={{
@@ -14,7 +27,25 @@ export default ({ image, title, description }) => (
       }}
     >
       <Image src={image} />
-      <Box px={2}>
+      <Box p={2}>
+        <BeautyStars value={rating} />
+        <Box pt={3}>
+          <Select
+            id="book-action"
+            name="book-action"
+            defaultValue="Not reading..."
+            onChange={evt => onStarted(bookId, evt.target.value)}
+            sx={{
+              borderRadius: 5,
+            }}
+          >
+            {Object.entries(actions).map(([_, action]) => (
+              <option key={action.key} value={action.key}>
+                {action.name}
+              </option>
+            ))}
+          </Select>
+        </Box>
         <Artifika tag="h3">{title}</Artifika>
         <Body fontSize={0}>{description}</Body>
       </Box>

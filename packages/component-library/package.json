@@ -63,6 +63,7 @@
   "dependencies": {
     "@rebass/forms": "^4.0.6",
     "@rebass/layout": "^4.0.6",
+    "beauty-stars": "^1.1.0",
     "rebass": "^4.0.7"
   }
 }
