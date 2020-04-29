@@ -1,16 +1,11 @@
-import { call, put, takeLatest } from 'redux-saga/effects'
+import { call, put } from 'redux-saga/effects'
+import * as api from '../api'
 import {
-  FETCH_META_STARTED,
   FETCH_META_SUCCEEDED,
   FETCH_META_FAILED,
-} from '../components/book-list/actions'
-import * as api from './api'
+} from '../../components/book-list/actions'
 
-export default function* rootSaga() {
-  yield takeLatest(FETCH_META_STARTED, watchFetchMeta)
-}
-
-function* watchFetchMeta() {
+export const watchBookMeta = function* watchFetchMeta() {
   try {
     const { data } = yield call(api.fetchMeta)
     yield put({

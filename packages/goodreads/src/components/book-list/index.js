@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { fetchMeta } from './actions'
 import { connect } from 'react-redux'
+import { components } from '@goodreads-v2/component-library'
+
+const { BookGrid } = components
 
 class BookList extends Component {
   static defaultProps = {
