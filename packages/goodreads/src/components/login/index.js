@@ -7,13 +7,20 @@ import { doLogin } from './actions'
 const { Login } = components
 
 class DashboardLogin extends Component {
+  static defaultProps = {
+    onLogin: () => {},
+  }
   static propTypes = {
     onLogin: PropTypes.func.isRequired,
   }
 
-  render() {
+  handleLogin = (username, password) => {
     const { dispatch } = this.props
-    return <Login onLogin={() => dispatch(doLogin())} />
+    return dispatch(doLogin(username, password))
+  }
+
+  render() {
+    return <Login onLogin={this.handleLogin} />
   }
 }
 

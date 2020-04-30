@@ -13,3 +13,11 @@ export const FETCH_RATING_FAILED = 'FETCH_RATING_FAILED'
 export const fetchMeta = () => ({
   type: FETCH_META_STARTED,
 })
+
+export const fetchImages = () => ({
+  type: FETCH_IMAGES_STARTED,
+})
+
+export const fetchRatings = () => ({
+  type: FETCH_RATING_STARTED,
+})

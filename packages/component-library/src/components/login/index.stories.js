@@ -4,7 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import Login from '.'
 
-storiesOf('Components|Elements.Login', module)
+storiesOf('Components|Pages.Login', module)
   .addDecorator(withKnobs)
   .add('Login prompt', () => {
     return <Login onLogin={action('user-login')} />

@@ -4,7 +4,8 @@ import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import App from '../components/app'
-import Login from '../components/login'
+import DashboardLogin from '../components/login'
+import DashboardRegister from '../components/register'
 
 const Routes = ({ store }) => (
   <Provider store={store}>
@@ -12,7 +13,16 @@ const Routes = ({ store }) => (
       <Fragment>
         <Switch>
           <Route exact path="/" render={(props) => <App {...props} />} />
-          <Route exact path="/login" render={(props) => <Login {...props} />} />
+          <Route
+            exact
+            path="/login"
+            render={(props) => <DashboardLogin {...props} />}
+          />
+          <Route
+            exact
+            path="/register"
+            render={(props) => <DashboardRegister {...props} />}
+          />
         </Switch>
       </Fragment>
     </Router>

@@ -19,6 +19,9 @@ export default {
     'prop-types',
     'styled-components',
     'styled-system',
+    'rebass',
+    '@rebass/layout',
+    '@rebass/forms',
     './Artifika-Regular.woff',
     './Artifika-Regular.woff2',
   ],
@@ -40,7 +43,6 @@ export default {
         },
       ],
     }),
-    terser(),
     bundleSize(),
   ],
 }

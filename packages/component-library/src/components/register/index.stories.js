@@ -7,5 +7,5 @@ import Register from '.'
 storiesOf('Components|Pages.Register', module)
   .addDecorator(withKnobs)
   .add('Register prompt', () => {
-    return <Register onRegsiter={action('user-register')} />
+    return <Register onRegister={action('user-register')} />
   })

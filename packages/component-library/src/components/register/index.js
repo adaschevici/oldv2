@@ -69,7 +69,7 @@ export default ({ onRegister }) => {
           <Button
             width={[1]}
             mr={2}
-            onClick={onRegister}
+            onClick={() => onRegister(username, password)}
             sx={{ backgroundColor: theme.colors.blues[1] }}
           >
             Register

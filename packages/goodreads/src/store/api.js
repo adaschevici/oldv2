@@ -10,7 +10,7 @@ export function fetchMeta() {
   return client.get('/meta')
 }
 
-export function fetchRatings() {
+export function fetchRating() {
   return client.get('/ratings')
 }
 
@@ -18,12 +18,12 @@ export function fetchImages() {
   return client.get('/images')
 }
 
-export function createUser() {
+export function createUser(username, password) {
   return client.post('/auth/registration')
 }
 
-export function authenticateUser() {
-  return client.post('/auth/authentication')
+export function authenticateUser(username, password) {
+  return client.post('/auth/authenticate')
 }
 
 export function checkToken() {

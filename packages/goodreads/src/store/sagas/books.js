@@ -3,6 +3,10 @@ import * as api from '../api'
 import {
   FETCH_META_SUCCEEDED,
   FETCH_META_FAILED,
+  FETCH_IMAGES_SUCCEEDED,
+  FETCH_IMAGES_FAILED,
+  FETCH_RATING_SUCCEEDED,
+  FETCH_RATING_FAILED,
 } from '../../components/book-list/actions'
 
 export const watchBookMeta = function* watchFetchMeta() {
@@ -15,6 +19,36 @@ export const watchBookMeta = function* watchFetchMeta() {
   } catch (e) {
     yield put({
       type: FETCH_META_FAILED,
+      payload: { error: e.message },
+    })
+  }
+}
+
+export const watchBookImages = function* watchFetchImages() {
+  try {
+    const { data } = yield call(api.fetchImages)
+    yield put({
+      type: FETCH_IMAGES_SUCCEEDED,
+      payload: { images: data },
+    })
+  } catch (e) {
+    yield put({
+      type: FETCH_IMAGES_FAILED,
+      payload: { error: e.message },
+    })
+  }
+}
+
+export const watchBookRatings = function* watchFetchRatings() {
+  try {
+    const { data } = yield call(api.fetchRating)
+    yield put({
+      type: FETCH_RATING_SUCCEEDED,
+      payload: { ratings: data },
+    })
+  } catch (e) {
+    yield put({
+      type: FETCH_RATING_FAILED,
       payload: { error: e.message },
     })
   }
