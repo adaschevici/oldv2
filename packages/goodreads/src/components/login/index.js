@@ -14,9 +14,9 @@ class DashboardLogin extends Component {
     onLogin: PropTypes.func.isRequired,
   }
 
-  handleLogin = (username, password) => {
+  handleLogin = (email, password) => {
     const { dispatch } = this.props
-    return dispatch(doLogin(username, password))
+    return dispatch(doLogin(email, password))
   }
 
   render() {

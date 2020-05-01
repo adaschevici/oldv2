@@ -6,9 +6,9 @@ import {
   REGISTRATION_FAILED,
 } from '../../components/register/actions'
 
-export const watchLogin = function* watchPerformLogin() {
+export const watchLogin = function* watchPerformLogin({ payload }) {
   try {
-    const { data } = yield call(api.authenticateUser)
+    yield call(api.authenticateUser, payload)
     yield put({
       type: LOGIN_SUCCEEDED,
     })
@@ -19,13 +19,16 @@ export const watchLogin = function* watchPerformLogin() {
   }
 }
 
-export const watchRegistration = function* watchPerformRegistration() {
+export const watchRegistration = function* watchPerformRegistration({
+  payload,
+}) {
   try {
-    const { data } = yield call(api.createUser)
+    yield call(api.createUser, payload)
     yield put({
       type: REGISTRATION_SUCCEEDED,
     })
   } catch (e) {
+    console.log(e)
     yield put({
       type: REGISTRATION_FAILED,
     })

@@ -6,5 +6,9 @@ export const doLogin = (username, password) => {
   console.log(username, password)
   return {
     type: LOGIN_STARTED,
+    payload: {
+      email: username,
+      password,
+    },
   }
 }

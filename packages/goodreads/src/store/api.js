@@ -18,12 +18,12 @@ export function fetchImages() {
   return client.get('/images')
 }
 
-export function createUser(username, password) {
-  return client.post('/auth/registration')
+export function createUser({ email, password }) {
+  return client.post('/auth/register', { email, password })
 }
 
-export function authenticateUser(username, password) {
-  return client.post('/auth/authenticate')
+export function authenticateUser({ email, password }) {
+  return client.post('/auth/authenticate', { email, password })
 }
 
 export function checkToken() {

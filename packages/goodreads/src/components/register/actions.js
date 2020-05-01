@@ -4,4 +4,8 @@ export const REGISTRATION_FAILED = 'REGISTRATION_FAILED'
 
 export const doRegister = (username, password) => ({
   type: REGISTRATION_STARTED,
+  payload: {
+    email: username,
+    password,
+  },
 })

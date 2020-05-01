@@ -7,19 +7,20 @@ import { doRegister } from './actions'
 const { Register } = components
 
 class DashboardRegister extends Component {
+  static defaultProps = {
+    onRegister: () => {},
+  }
   static propTypes = {
     onRegister: PropTypes.func.isRequired,
   }
 
-  render() {
+  handleRegister = (username, password) => {
     const { dispatch } = this.props
-    return (
-      <Register
-        onRegsiter={(username, password) =>
-          dispatch(doRegister(username, password))
-        }
-      />
-    )
+    return dispatch(doRegister(username, password))
+  }
+
+  render() {
+    return <Register onRegister={this.handleRegister} />
   }
 }
 
