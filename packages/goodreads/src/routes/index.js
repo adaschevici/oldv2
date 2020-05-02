@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { components } from '@goodreads-v2/component-library'
 
 import App from '../components/app'
 import DashboardLogin from '../components/login'

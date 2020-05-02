@@ -2694,6 +2694,67 @@ exports[`Storyshots Components|Elements.BookGrid Book Grid for list 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components|Elements.NavBar Navbar with wrapper 1`] = `
+Array [
+  <div
+    className="css-9suweq"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <h1
+        className="sc-AxjAm iLVLdl"
+        color="#2d8fd5"
+        fontFamily="Artifika"
+        fontSize={
+          Array [
+            12,
+            12,
+            13,
+            13,
+            13,
+            14,
+          ]
+        }
+        fontWeight="bold"
+      >
+        DashBoard
+      </h1>
+    </a>
+    <div
+      className="css-1ntkiwo"
+    />
+    <a
+      href="/login"
+      onClick={[Function]}
+    >
+      <h1
+        className="sc-AxjAm iLVLdl"
+        color="#2d8fd5"
+        fontFamily="Artifika"
+        fontSize={
+          Array [
+            12,
+            12,
+            13,
+            13,
+            13,
+            14,
+          ]
+        }
+        fontWeight="bold"
+      >
+        Login
+      </h1>
+    </a>
+  </div>,
+  <div>
+    I'm the dashboard component
+  </div>,
+]
+`;
+
 exports[`Storyshots Components|Pages.Login Login prompt 1`] = `
 <div
   className="css-tm0ebp"

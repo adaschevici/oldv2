@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { components } from '@goodreads-v2/component-library'
 import { doRegister } from './actions'
 
-const { Register } = components
+const { Register, NavBar } = components
 
 class DashboardRegister extends Component {
   static defaultProps = {
@@ -20,7 +20,12 @@ class DashboardRegister extends Component {
   }
 
   render() {
-    return <Register onRegister={this.handleRegister} />
+    return (
+      <Fragment>
+        <NavBar />
+        <Register onRegister={this.handleRegister} />
+      </Fragment>
+    )
   }
 }
 

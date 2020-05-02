@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { Fragment, Component } from 'react'
 import PropTypes from 'prop-types'
 import { fetchMeta, fetchImages, fetchRatings } from './actions'
 import { connect } from 'react-redux'
 import { components } from '@goodreads-v2/component-library'
 import faker from 'faker'
 
-const { BookGrid } = components
+const { BookGrid, NavBar } = components
 
 const books = (howMany = 10) => {
   let books = []
@@ -41,7 +41,11 @@ class BookList extends Component {
     console.log(rating)
     console.log(images)
     console.log(books())
-    return <BookGrid books={books()} />
+    return (
+      <Fragment>
+        <BookGrid books={books()} />
+      </Fragment>
+    )
   }
 }
 

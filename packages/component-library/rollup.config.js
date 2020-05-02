@@ -16,6 +16,7 @@ export default {
   external: [
     'react',
     'react-dom',
+    'react-router-dom',
     'prop-types',
     'styled-components',
     'styled-system',

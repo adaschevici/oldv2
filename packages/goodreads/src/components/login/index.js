@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { components } from '@goodreads-v2/component-library'
 import { doLogin } from './actions'
 
-const { Login } = components
+const { Login, NavBar } = components
 
 class DashboardLogin extends Component {
   static defaultProps = {
@@ -20,7 +20,12 @@ class DashboardLogin extends Component {
   }
 
   render() {
-    return <Login onLogin={this.handleLogin} />
+    return (
+      <Fragment>
+        <NavBar />
+        <Login onLogin={this.handleLogin} />
+      </Fragment>
+    )
   }
 }
 
