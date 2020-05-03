@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { components } from '@goodreads-v2/component-library'
 import { doLogin } from './actions'
+import { Redirect } from 'react-router-dom'
 
 const { Login, NavBar } = components
 
@@ -20,18 +21,19 @@ class DashboardLogin extends Component {
   }
 
   render() {
+    const { success } = this.props
     return (
       <Fragment>
         <NavBar />
-        <Login onLogin={this.handleLogin} />
+        {success ? <Redirect to="/" /> : <Login onLogin={this.handleLogin} />}
       </Fragment>
     )
   }
 }
 
 function mapStateToProps(state) {
-  const { meta, isLoading, error } = state.books.meta
-  return { meta, isLoading, error }
+  const { isLoading, error, success } = state.login
+  return { isLoading, error, success }
 }
 
 export default connect(mapStateToProps)(DashboardLogin)

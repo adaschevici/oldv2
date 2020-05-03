@@ -30,8 +30,8 @@ class DashboardRegister extends Component {
 }
 
 function mapStateToProps(state) {
-  const { isLoading, error } = state.app
-  return { isLoading, error }
+  const { isLoading, error, success } = state.register
+  return { isLoading, error, success }
 }
 
 export default connect(mapStateToProps)(DashboardRegister)

@@ -6,15 +6,30 @@ import {
   REGISTRATION_FAILED,
 } from '../../components/register/actions'
 
+const stripStatus = (message) => {
+  const status = new RegExp(/\d{3}/g)
+  return +message.match(status)[0]
+}
 export const watchLogin = function* watchPerformLogin({ payload }) {
   try {
-    yield call(api.authenticateUser, payload)
+    const { data } = yield call(api.authenticateUser, payload)
     yield put({
       type: LOGIN_SUCCEEDED,
+      payload: {
+        msg: data,
+      },
     })
   } catch (e) {
+    const status = stripStatus(e.message)
+    const errorMessageMap = {
+      404: 'User does not exist',
+      401: 'Password is incorrect',
+    }
     yield put({
       type: LOGIN_FAILED,
+      payload: {
+        error: errorMessageMap[status],
+      },
     })
   }
 }
@@ -23,14 +38,24 @@ export const watchRegistration = function* watchPerformRegistration({
   payload,
 }) {
   try {
-    yield call(api.createUser, payload)
+    const { data } = yield call(api.createUser, payload)
+    console.log(data)
     yield put({
       type: REGISTRATION_SUCCEEDED,
+      payload: {
+        msg: data,
+      },
     })
   } catch (e) {
-    console.log(e)
+    const status = stripStatus(e.message)
+    const errorMessageMap = {
+      500: 'User already exists',
+    }
     yield put({
       type: REGISTRATION_FAILED,
+      payload: {
+        error: errorMessageMap[status],
+      },
     })
   }
 }
