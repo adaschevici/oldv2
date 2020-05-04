@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs } from '@storybook/addon-knobs'
+import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { decorate } from '@storybook/addon-actions'
 import faker from 'faker'
 import BookGrid from '.'
@@ -26,5 +26,10 @@ const books = (howMany = 10) => {
 storiesOf('Components|Elements.BookGrid', module)
   .addDecorator(withKnobs)
   .add('Book Grid for list', () => {
-    return <BookGrid books={books()} />
+    return (
+      <BookGrid
+        books={books()}
+        authenticated={boolean('Authenticated', false)}
+      />
+    )
   })
