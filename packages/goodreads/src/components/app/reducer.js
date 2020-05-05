@@ -1,5 +1,4 @@
 const initialState = {
-  loggedIn: true,
   isLoading: false,
   error: null,
 }

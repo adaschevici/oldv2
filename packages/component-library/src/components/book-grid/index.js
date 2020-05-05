@@ -5,7 +5,11 @@ import BookCard from '../card'
 export default ({ books, authenticated }) => (
   <Tiles columns={[1, 2, 2, 4, 6, 8]}>
     {books.map(book => (
-      <BookCard key={`${book.id}`} authenticated={authenticated} {...book} />
+      <BookCard
+        key={`${book.id}${book.title}`}
+        authenticated={authenticated}
+        {...book}
+      />
     ))}
   </Tiles>
 )

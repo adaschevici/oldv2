@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { fetchMeta, fetchImages, fetchRatings } from './actions'
+import { fetchBooks } from './actions'
 import { connect } from 'react-redux'
 import { components } from '@goodreads-v2/component-library'
 
@@ -8,19 +8,15 @@ const { BookGrid } = components
 
 class BookList extends Component {
   static defaultProps = {
-    fetchMeta: () => {},
+    fetchBooks: () => {},
   }
   static propTypes = {
-    fetchMeta: PropTypes.func.isRequired,
-    fetchRatings: PropTypes.func.isRequired,
-    fetchImages: PropTypes.func.isRequired,
+    fetchBooks: PropTypes.func.isRequired,
   }
 
   componentDidMount = () => {
     const { dispatch } = this.props
-    dispatch(fetchMeta())
-    dispatch(fetchImages())
-    dispatch(fetchRatings())
+    dispatch(fetchBooks())
   }
 
   render() {
@@ -30,7 +26,6 @@ class BookList extends Component {
       ...ratings[idx],
       ...images[idx],
     }))
-    console.log(authenticated, username)
     return (
       <BookGrid
         authenticated={authenticated}
