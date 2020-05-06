@@ -6,6 +6,7 @@ import {
   startBook,
   stopBook,
 } from './actions'
+import { getBooks, getBooksProgress } from './selectors'
 
 import { connect } from 'react-redux'
 import { components, typography } from '@goodreads-v2/component-library'
@@ -40,26 +41,16 @@ class BookList extends Component {
   }
 
   render() {
-    const { meta, ratings, images, authenticated } = this.props
+    const { books: booksCollection, authenticated } = this.props
     const { booksInProgress } = this.props
-    let progressData = []
-    const booksCollection = meta.map((bookMeta, idx) => {
-      const book = {
-        ...bookMeta,
-        ...ratings[idx],
-        ...images[idx],
-      }
-      if (booksInProgress.includes(bookMeta.id)) progressData.push(book)
-      return book
-    })
     return (
       <Fragment>
         {authenticated && (
           <Fragment>
             <Artifika>Currently reading</Artifika>
-            {progressData.length ? (
+            {booksInProgress.length ? (
               <BookGrid>
-                {progressData.map((book) => (
+                {booksInProgress.map((book) => (
                   <BookCard
                     key={`${book.id}${book.title}`}
                     authenticated={authenticated}
@@ -93,20 +84,13 @@ class BookList extends Component {
 }
 
 function mapStateToProps(state) {
-  const {
-    meta,
-    images,
-    ratings,
-    isLoading,
-    error,
-    booksInProgress,
-  } = state.books
+  const { isLoading, error } = state.books
   const { error: authError, username } = state.authStatus
   const authenticated = authError === null
+  const books = getBooks(state)
+  const booksInProgress = getBooksProgress(state)
   return {
-    meta,
-    images,
-    ratings,
+    books,
     isLoading,
     error,
     authenticated,
