@@ -23,7 +23,7 @@ const logger = ({ getState }) => (next) => (action) => {
   return returnValue
 }
 
-const middlewares = [sagaMiddleware, logger]
+const middlewares = [sagaMiddleware]
 
 export default function configureStore(initialState = {}) {
   const store = createStore(

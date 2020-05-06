@@ -3,9 +3,13 @@ import { checkAuth } from './actions'
 import { connect } from 'react-redux'
 
 class AuthCheck extends Component {
+  componentDidUpdate() {
+    const { dispatch } = this.props
+    dispatch(checkAuth())
+  }
   componentDidMount() {
     const { dispatch } = this.props
-    return dispatch(checkAuth())
+    dispatch(checkAuth())
   }
 
   render() {
@@ -14,7 +18,8 @@ class AuthCheck extends Component {
   }
 }
 
-const mapStateToProps = ({ username }) => {
+const mapStateToProps = (state) => {
+  const { username } = state.authStatus
   return { username }
 }
 

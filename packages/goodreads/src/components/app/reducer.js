@@ -3,7 +3,7 @@ const initialState = {
   error: null,
 }
 
-export default function tasks(state = initialState, action) {
+export default function books(state = initialState, action) {
   switch (action.type) {
     default: {
       return state

@@ -8,6 +8,9 @@ import {
   FETCH_BOOKS_STARTED,
   FETCH_BOOKS_FAILED,
   FETCH_BOOKS_SUCCEEDED,
+  FETCH_BOOKS_IN_PROGRESS_STARTED,
+  FETCH_BOOKS_IN_PROGRESS_FAILED,
+  FETCH_BOOKS_IN_PROGRESS_SUCCEEDED,
 } from './actions'
 
 const initialState = {
@@ -67,6 +70,26 @@ export default function books(state = initialState, action) {
       }
     }
     case FETCH_BOOKS_FAILED: {
+      return {
+        ...state,
+        isLoading: false,
+        error: action.payload.error,
+      }
+    }
+    case FETCH_BOOKS_IN_PROGRESS_STARTED: {
+      return {
+        ...state,
+        isLoading: true,
+      }
+    }
+    case FETCH_BOOKS_IN_PROGRESS_SUCCEEDED: {
+      return {
+        ...state,
+        booksInProgress: action.payload.booksInProgress,
+        isLoading: false,
+      }
+    }
+    case FETCH_BOOKS_IN_PROGRESS_FAILED: {
       return {
         ...state,
         isLoading: false,

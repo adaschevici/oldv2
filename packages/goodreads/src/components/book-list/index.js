@@ -1,46 +1,118 @@
-import React, { Component } from 'react'
+import React, { Fragment, Component } from 'react'
 import PropTypes from 'prop-types'
-import { fetchBooks } from './actions'
-import { connect } from 'react-redux'
-import { components } from '@goodreads-v2/component-library'
+import {
+  fetchBooks,
+  fetchBooksInProgress,
+  startBook,
+  stopBook,
+} from './actions'
 
-const { BookGrid } = components
+import { connect } from 'react-redux'
+import { components, typography } from '@goodreads-v2/component-library'
+
+const { BookGrid, BookCard } = components
+const { Artifika, Body } = typography
 
 class BookList extends Component {
   static defaultProps = {
     fetchBooks: () => {},
+    books: [],
+    images: [],
+    booksInProgress: [],
   }
   static propTypes = {
     fetchBooks: PropTypes.func.isRequired,
   }
 
+  componentDidUpdate = (prevProps) => {
+    const { username: prevUsername } = prevProps
+    const { dispatch, username } = this.props
+    if (prevUsername !== username) {
+      dispatch(fetchBooksInProgress(username))
+    }
+  }
   componentDidMount = () => {
-    const { dispatch } = this.props
+    const { dispatch, authenticated, username } = this.props
     dispatch(fetchBooks())
+    if (authenticated) {
+      dispatch(fetchBooksInProgress(username))
+    }
   }
 
   render() {
-    const { meta, ratings, images, authenticated, username } = this.props
-    const books = meta.map((bookMeta, idx) => ({
-      ...bookMeta,
-      ...ratings[idx],
-      ...images[idx],
-    }))
+    const { meta, ratings, images, authenticated } = this.props
+    const { booksInProgress } = this.props
+    let progressData = []
+    const booksCollection = meta.map((bookMeta, idx) => {
+      const book = {
+        ...bookMeta,
+        ...ratings[idx],
+        ...images[idx],
+      }
+      if (booksInProgress.includes(bookMeta.id)) progressData.push(book)
+      return book
+    })
     return (
-      <BookGrid
-        authenticated={authenticated}
-        username={username}
-        books={books}
-      />
+      <Fragment>
+        {authenticated && (
+          <Fragment>
+            <Artifika>Currently reading</Artifika>
+            {progressData.length ? (
+              <BookGrid>
+                {progressData.map((book) => (
+                  <BookCard
+                    key={`${book.id}${book.title}`}
+                    authenticated={authenticated}
+                    onStopped={stopBook}
+                    {...book}
+                  />
+                ))}
+              </BookGrid>
+            ) : (
+              <div>
+                <Body tag="h6">Nothing to show here...yet :(</Body>
+              </div>
+            )}
+          </Fragment>
+        )}
+        <Artifika>Books</Artifika>
+        <BookGrid>
+          {booksCollection.map((book) => (
+            <BookCard
+              key={`${book.id}${book.title}`}
+              authenticated={authenticated}
+              onStarted={startBook}
+              onStopped={stopBook}
+              {...book}
+            />
+          ))}
+        </BookGrid>
+      </Fragment>
     )
   }
 }
 
 function mapStateToProps(state) {
-  const { meta, images, ratings, isLoading, error } = state.books
+  const {
+    meta,
+    images,
+    ratings,
+    isLoading,
+    error,
+    booksInProgress,
+  } = state.books
   const { error: authError, username } = state.authStatus
   const authenticated = authError === null
-  return { meta, images, ratings, isLoading, error, authenticated, username }
+  return {
+    meta,
+    images,
+    ratings,
+    isLoading,
+    error,
+    authenticated,
+    username,
+    booksInProgress,
+  }
 }
 
 export default connect(mapStateToProps)(BookList)

@@ -7,14 +7,15 @@ import {
 const initialState = {
   isLoading: false,
   username: null,
-  error: null,
+  error: 'Not authenticated',
 }
 
-export default function login(state = initialState, action) {
+export default function authChecker(state = initialState, action) {
   switch (action.type) {
     case CHECK_AUTH_STARTED: {
       return {
         ...state,
+        error: 'Not authenticated',
         isLoading: true,
       }
     }
@@ -22,6 +23,7 @@ export default function login(state = initialState, action) {
       return {
         ...state,
         username: action.payload.username,
+        error: null,
         isLoading: false,
       }
     }

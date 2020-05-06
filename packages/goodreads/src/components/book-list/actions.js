@@ -14,6 +14,14 @@ export const FETCH_BOOKS_STARTED = 'FETCH_RATING_STARTED'
 export const FETCH_BOOKS_SUCCEEDED = 'FETCH_RATING_SUCCEEDED'
 export const FETCH_BOOKS_FAILED = 'FETCH_RATING_FAILED'
 
+export const FETCH_BOOKS_IN_PROGRESS_STARTED = 'FETCH_BOOKS_IN_PROGRESS_STARTED'
+export const FETCH_BOOKS_IN_PROGRESS_SUCCEEDED =
+  'FETCH_BOOKS_IN_PROGRESS_SUCCEEDED'
+export const FETCH_BOOKS_IN_PROGRESS_FAILED = 'FETCH_BOOKS_IN_PROGRESS_FAILED'
+
+export const START_BOOK = 'START_BOOK'
+export const STOP_BOOK = 'STOP_BOOK'
+
 export const fetchMeta = () => ({
   type: FETCH_META_STARTED,
 })
@@ -28,4 +36,19 @@ export const fetchRatings = () => ({
 
 export const fetchBooks = () => ({
   type: FETCH_BOOKS_STARTED,
+})
+
+export const fetchBooksInProgress = (username) => ({
+  type: FETCH_BOOKS_IN_PROGRESS_STARTED,
+  payload: {
+    username,
+  },
+})
+
+export const startBook = () => ({
+  type: START_BOOK,
+})
+
+export const stopBook = () => ({
+  type: STOP_BOOK,
 })
