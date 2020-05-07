@@ -19,7 +19,8 @@
     "start:goodreads": "lerna exec npm start --scope=@goodreads-v2/goodreads",
     "start:server": "lerna exec npm run server:dev --scope=jungle-jim",
     "start:app": "npm-run-all --parallel start:server start:goodreads",
-    "snapshot:components": "lerna exec npm run test --scope=@goodreads-v2/component-library"
+    "snapshot:components": "lerna exec npm run test --scope=@goodreads-v2/component-library",
+    "test:app": "lerna exec npm run test --scope=@goodreads-v2/goodreads"
   },
   "keywords": [
     "goodreads",

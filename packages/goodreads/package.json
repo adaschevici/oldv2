@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@goodreads-v2/component-library": "^0.0.0",
+    "@rebass/forms": "^4.0.6",
+    "@rebass/layout": "^4.0.6",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -11,8 +13,6 @@
     "faker": "^4.1.0",
     "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
-    "@rebass/forms": "^4.0.6",
-    "@rebass/layout": "^4.0.6",
     "rebass": "^4.0.7",
     "redux": "^4.0.5",
     "redux-saga": "^1.1.3",
