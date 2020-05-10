@@ -23,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "snapshots:test": "cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +42,8 @@
     ]
   },
   "devDependencies": {
+    "cypress": "^4.5.0",
+    "cypress-plugin-snapshots": "^1.4.3",
     "redux-devtools-extension": "^2.13.8"
   }
 }
