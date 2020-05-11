@@ -13,13 +13,12 @@ jobs:
             - run: npm run snapshot:test
             - run: npm run build:components
             - save_cache:
-                key: components-library
+                key: components-lib-{{ .Revision }}
                 paths:
-                  - packages/component-library/lib/component.bundle.js
-                  - packages/component-library/lib/fonts/Artifika-Regular.woff
-                  - packages/component-library/lib/fonts/Artifika-Regular.woff2
+                  - packages/component-library/lib
+                  - packages/component-library/lib/fonts
 
-  build-and-test-goodreads:
+  test-goodreads:
     executor:
       name: node/default
     steps:
@@ -28,14 +27,14 @@ jobs:
           steps:
             - restore_cache:
                 keys:
-                  - components-library
+                  - components-lib-{{ .Revision }}
             - run: npm run bootstrap
             - run: npm run test:app
 workflows:
     build-and-test-components:
       jobs:
         - build-and-test-components
-        - build-and-test-goodreads:
+        - test-goodreads:
             requires:
               - build-and-test-components
 
