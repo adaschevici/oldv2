@@ -10,7 +10,7 @@ const composeEnhancers = composeWithDevTools({
 
 const sagaMiddleware = createSagaMiddleware()
 
-const logger = ({ getState }) => (next) => (action) => {
+const logger = ({ getState }) => next => action => {
   const console = window.console
   const prevState = getState()
   const returnValue = next(action)
@@ -23,7 +23,7 @@ const logger = ({ getState }) => (next) => (action) => {
   return returnValue
 }
 
-const middlewares = [sagaMiddleware]
+const middlewares = [logger, sagaMiddleware]
 
 export default function configureStore(initialState = {}) {
   const store = createStore(

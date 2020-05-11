@@ -30,6 +30,41 @@ jobs:
                   - components-lib-{{ .Revision }}
             - run: npm run bootstrap
             - run: npm run test:app
+  build-goodreads:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - restore_cache:
+                keys:
+                  - components-lib-{{ .Revision }}
+            - run: npm run bootstrap
+            - run: npm run build:app
+            - save_cache:
+                key: goodreads-build-{{ .Revision }}
+                paths:
+                  - packages/goodreads/build
+  test-integration:
+    docker:
+      - image: cypress/base:10
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - restore_cache:
+                keys:
+                  - components-lib-{{ .Revision }}
+                  - goodreads-build-{{ .Revision }}
+            - run: git submodule update --init
+            - run: npm run bootstrap
+            - run:
+                command: npm run start:app-test
+                background: true
+            - run: npm run test:cy
 workflows:
     build-and-test-components:
       jobs:
@@ -37,4 +72,10 @@ workflows:
         - test-goodreads:
             requires:
               - build-and-test-components
+        - build-goodreads:
+            requires:
+              - build-and-test-components
+        - test-integration:
+            requires:
+              - build-goodreads
 
