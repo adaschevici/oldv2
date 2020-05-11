@@ -12,6 +12,13 @@ jobs:
             - run: npm run bootstrap
             - run: npm run snapshot:test
             - run: npm run build:components
+            - save_cache:
+                key: components-library
+                paths:
+                  - packages/component-library/lib/component.bundle.js
+                  - packages/component-library/lib/fonts/Artifika-Regular.woff
+                  - packages/component-library/lib/fonts/Artifika-Regular.woff2
+
   build-and-test-goodreads:
     executor:
       name: node/default
@@ -19,6 +26,9 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
+            - restore_cache:
+                keys:
+                  - components-library
             - run: npm run bootstrap
             - run: npm run test:app
 workflows:
