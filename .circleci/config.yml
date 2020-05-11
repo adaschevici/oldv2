@@ -53,7 +53,10 @@ jobs:
           steps:
             - run: git submodule update --init
             - run: npm run bootstrap
-            - run: npm run test:integration
+            - run:
+                command: npm run start:app-test
+                background: true
+            - run: npm run test:cy
 workflows:
     build-and-test-components:
       jobs:
