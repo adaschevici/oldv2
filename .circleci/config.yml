@@ -42,24 +42,14 @@ jobs:
                   - components-lib-{{ .Revision }}
             - run: npm run bootstrap
             - run: npm run build:app
-  test-integration:
-    docker:
-      - image: cypress/base:10
-    executor:
-      name: node/default
-    steps:
-      - checkout
-      - node/with-cache:
-          steps:
-            - run: git submodule update --init
-            - run: npm run bootstrap
-            - run: npm run build:components
-            - run:
-                command: npm run start:app-test & npx wait-on http://127.0.0.1:3000
-                background: true
-            - run: npm run test:cy
 workflows:
-    build-and-test-components:
+    build-components-and-app:
       jobs:
-        - test-integration
+        - build-and-test-components
+        - test-goodreads:
+            requires:
+              - build-and-test-components
+        - build-goodreads:
+            requires:
+              - build-and-test-components
 

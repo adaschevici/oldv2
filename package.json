@@ -24,7 +24,7 @@
     "snapshot:test": "lerna exec npm run test --scope=@goodreads-v2/component-library",
     "test:app": "lerna exec npm run test --scope=@goodreads-v2/goodreads",
     "start:fake": "serve -l 3000 packages/goodreads/public",
-    "start:app-test": "npm-run-all --parallel start:test-server-ci start:goodreads",
+    "start:app-test": "npm-run-all --parallel start:goodreads",
     "start:cy-app": "lerna exec cypress open --scope=@goodreads-v2/goodreads",
     "test:cy": "lerna exec cypress run --scope=@goodreads-v2/goodreads",
     "test:integration": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start:app-test http-get://127.0.0.1:3000 test:cy"
