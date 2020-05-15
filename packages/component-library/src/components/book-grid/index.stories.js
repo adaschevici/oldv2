@@ -1,9 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, boolean } from '@storybook/addon-knobs'
+import { withKnobs } from '@storybook/addon-knobs'
 import { decorate } from '@storybook/addon-actions'
 import faker from 'faker'
 import BookGrid from '.'
+import BookCard from '../card'
 
 const bookProgress = decorate([args => args.slice(0, 2)])
 
@@ -27,9 +28,10 @@ storiesOf('Components|Elements.BookGrid', module)
   .addDecorator(withKnobs)
   .add('Book Grid for list', () => {
     return (
-      <BookGrid
-        books={books()}
-        authenticated={boolean('Authenticated', false)}
-      />
+      <BookGrid>
+        {books().map(book => (
+          <BookCard key={book.bookId} {...book} />
+        ))}
+      </BookGrid>
     )
   })
